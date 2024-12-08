@@ -1,0 +1,1 @@
+console.log("This is printed from an external file");
