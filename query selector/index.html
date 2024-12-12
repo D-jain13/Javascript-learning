@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector Practice</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">Learning Query Selector</h1>
+    <p class="description">This is a simple page for practicing DOM manipulation.</p>
+    <ul id="item-list">
+        <li class="item">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+    </ul>
+    <button id="action-btn">Click Me!</button>
+    <input type="text" id="name-input" placeholder="Enter your name" />
+
+    <script>
+        // learnt query selector 
+        
+        const h1 = document.getElementById("main-title")
+        h1.style.color = "blue" 
+        
+        const button = document.getElementById("action-btn")
+        button.innerText = "Submit"
+        
+        const list = document.querySelectorAll('.item')
+        list.forEach((item) =>  item.classList.add('highlight'))
+
+        const input = document.getElementById('name-input')
+        input.placeholder = "Type your full name"
+
+        const itemList = document.querySelectorAll(".item")
+        console.log(itemList.length)
+        
+        const desc = document.querySelector(".description")      
+        desc.style.fontStyle = "italic"  
+
+    </script>
+</body>
+</html>

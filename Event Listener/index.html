@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h1>Welcome to the world <span id="username">Dhairya</span></h1>
+
+    <button id="btn">Click to see magic</button>
+</body>
+<script>
+    const btn = document.getElementById('btn');
+    const span = document.getElementById('username')
+    
+    btn.addEventListener('click', () => {
+        
+        span.style.color = 'green'
+    })
+
+    btn.addEventListener('dblclick', () => {
+        span.style.color = 'black'
+    })
+</script>
+</html>
